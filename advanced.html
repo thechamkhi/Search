@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Google Search</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="image.html">Image Search</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="google-icon">
+            <img src="Google.png" alt="Google Icon">
+        </div>
+        <h1 class="editedh1">Advanced Search</h1>
+        <div class="line"></div>
+            <div class="advanced-search">
+                <form action="https://www.google.com/search" method="GET">
+                    <div class="input-group">
+                        <h2 class="editedh2">Find pages with…</h2>
+                    </div>
+                    <div class="input-group">
+                        <label for="all-words">all these words:</label>
+                        <input type="text" name="as_q" class="form-control">
+                        <p class="comment">Type the important words: <span class="fonty">tri-colour rat terrier</span></p>
+                    </div>
+                    <div class="input-group">
+                        <label for="exact-phrase">this exact word or phrase:</label>
+                        <input type="text" name="as_epq" class="form-control">
+                        <p class="comment">Put exact words in quotes: <span class="fonty">"rat terrier"</span></p>
+                    </div>
+                    <div class="input-group">
+                        <label for="any-words">any of these words:</label>
+                        <input type="text" name="as_oq" class="form-control">
+                        <p class="comment">Type <span class="fonty">OR</span> between all the words you want: <span class="fonty">miniature OR standard</span></p>
+                    </div>
+                    <div class="input-group">
+                        <label for="exclude-words">none of these words:</label>
+                        <input type="text" name="as_eq" class="form-control">
+                        <p class="comment">Put a minus sign just before words that you don't want: <span class="fonty">-rodent, -"Jack Russell"</span></p>
+                    </div>
+                    <input type="submit" value="Advanced Search" id="btn-advanced">
+                </form>
+            </div>
+    </main>
+</body>
+</html>

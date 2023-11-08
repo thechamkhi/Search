@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Google Search</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="image.html">Image Search</a></li>
+                <li><a href="advanced.html">Advanced Search</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="searchbar">
+            <img src="Google.png" alt="Google Logo">
+            <form action="https://www.google.com/search" method="GET">
+                <input type="text" name="q" id="bar">
+                <div class="buttons">
+                    <input type="submit" value="Google Search">
+                    <input type="button" value="I’m Feeling Lucky" id="luckyButton">
+
+                    <script>
+                        document.getElementById('luckyButton').addEventListener('click', luckySearch);
+                    
+                        function luckySearch() {
+                            var query = document.getElementById('bar').value;
+                            if (query) {
+                                window.location.href = 'https://www.google.com/search?btnI=1&q=' + encodeURIComponent(query);
+                            }
+                        }
+                    </script>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
